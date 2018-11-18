@@ -21,8 +21,6 @@ $extensionTotal = ['html','txt','jpg'];
 if (isset($_GET['f'])){
     $info = new SplFileInfo($_GET['f']);
     $extension = $info->getExtension();
-    $info = new SplFileInfo($_GET['f']);
-    $extension = $info->getExtension();
     //pour ouvrir les dossiers dans roswell, on les retrouve car ils n'ont pas d'extension
     if (!in_array($extension, $extensionTotal)){
         $folder = scandir('files/roswell/'.$_GET['f']);
